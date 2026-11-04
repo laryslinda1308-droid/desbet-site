@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="pt-BR">
 <head>
@@ -12,54 +13,107 @@
   <link rel="stylesheet" href="/styles.css">
 
   <style>
-    /* Logo do topo */
+    /* CORREÇÃO GERAL DOS TEXTOS */
+    h1, h2, h3 {
+      line-height: 1.12 !important;
+      letter-spacing: 0.01em !important;
+      overflow: visible !important;
+      word-break: normal !important;
+      overflow-wrap: normal !important;
+    }
+
+    /* LOGO DO TOPO */
+    .site-header .brand {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      background: transparent !important;
+    }
+
     .site-header .brand img {
-      background: transparent;
-      mix-blend-mode: multiply;
+      display: block !important;
+      width: 76px !important;
+      height: 76px !important;
+      object-fit: contain !important;
+      background: transparent !important;
+      mix-blend-mode: normal !important;
+      border: 0 !important;
+      box-shadow: none !important;
     }
 
-    /* Frase afastada da faixa decorativa */
+    /* FRASE DA PRIMEIRA PÁGINA */
+    .hero-art {
+      overflow: visible !important;
+    }
+
+    .hero-art .art-stripe {
+      z-index: 1 !important;
+    }
+
     .hero-art .art-caption {
-      transform: translateX(-34px);
-      z-index: 5;
+      position: absolute !important;
+      left: 18px !important;
+      right: 18px !important;
+      bottom: 12% !important;
+      top: auto !important;
+      width: auto !important;
+      max-width: none !important;
+      transform: none !important;
+      z-index: 20 !important;
+      text-align: center !important;
+      line-height: 1.25 !important;
+      letter-spacing: 0.04em !important;
+      white-space: normal !important;
     }
 
-    /* Créditos finais */
-    .footer-credits-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
-      gap: 32px;
-      align-items: start;
-      width: 100%;
-      margin: 18px 0 24px;
+    /* TERCEIRA PÁGINA */
+    .comeback,
+    .comeback-copy {
+      min-width: 0 !important;
     }
 
-    .footer-project-credit p,
-    .footer-team p {
-      margin: 0;
-      line-height: 1.7;
+    .comeback-copy h2 {
+      display: block !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      font-size: clamp(2.2rem, 5vw, 4.6rem) !important;
+      line-height: 1.12 !important;
+      letter-spacing: 0 !important;
+      white-space: normal !important;
+      overflow: visible !important;
     }
 
-    .footer-team h3 {
-      margin: 0 0 10px;
-      color: #f5a623;
-      font-size: 12px;
-      font-weight: 900;
-      letter-spacing: 2px;
+    .comeback-copy h2 em {
+      display: inline-block !important;
+      white-space: nowrap !important;
     }
 
-    .footer-team p + p {
-      margin-top: 4px;
+    /* OUTROS TÍTULOS */
+    .section-head h2,
+    .signs-layout h2,
+    .social-copy h2,
+    .final-inner h2 {
+      line-height: 1.12 !important;
+      letter-spacing: 0 !important;
+      overflow: visible !important;
     }
 
+    /* RESPONSIVIDADE */
     @media (max-width: 700px) {
-      .hero-art .art-caption {
-        transform: translateX(-12px);
+      .site-header .brand img {
+        width: 58px !important;
+        height: 58px !important;
       }
 
-      .footer-credits-grid {
-        grid-template-columns: 1fr;
-        gap: 18px;
+      .hero-art .art-caption {
+        left: 12px !important;
+        right: 12px !important;
+        bottom: 9% !important;
+        font-size: clamp(0.8rem, 3.2vw, 1.1rem) !important;
+      }
+
+      .comeback-copy h2 {
+        font-size: clamp(2rem, 9vw, 3.2rem) !important;
       }
     }
   </style>
@@ -73,9 +127,11 @@
 
   <header class="site-header">
     <a class="brand" href="#inicio" aria-label="DESBET, início">
-      <img src="/desbet-logo.jpg" alt="Logo DESBET com um tigre laranja sobre o nome">
+      <img src="/desbet-perfil.png" alt="Logo circular DESBET com tigre">
     </a>
+
     <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+
     <nav class="nav" aria-label="Navegação principal">
       <a href="#realidade">A realidade</a>
       <a href="#sinais">Sinais de alerta</a>
@@ -87,16 +143,33 @@
   </header>
 
   <main>
+
     <section class="hero section-wrap" id="inicio">
       <div class="hero-copy">
-        <p class="eyebrow"><span class="eyebrow-dot"></span> SUA VIDA VALE MAIS QUE QUALQUER APOSTA</p>
+        <p class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          SUA VIDA VALE MAIS QUE QUALQUER APOSTA
+        </p>
+
         <h1>E SE A PRÓXIMA<br>APOSTA FOSSE<br><em>EM VOCÊ?</em></h1>
-        <p class="hero-lead">A emoção de apostar pode durar segundos. As consequências podem ficar por muito mais tempo.</p>
-        <p class="hero-text">A DESBET é uma campanha para abrir os olhos, quebrar o silêncio e lembrar que a vida real merece estar em primeiro lugar.</p>
+
+        <p class="hero-lead">
+          A emoção de apostar pode durar segundos. As consequências podem ficar por muito mais tempo.
+        </p>
+
+        <p class="hero-text">
+          A DESBET é uma campanha para abrir os olhos, quebrar o silêncio e lembrar que a vida real merece estar em primeiro lugar.
+        </p>
+
         <div class="hero-actions">
-          <a class="button button-orange" href="#realidade">Entenda os impactos <span>↓</span></a>
-          <a class="text-link" href="#apoio">Preciso de ajuda <span>↗</span></a>
+          <a class="button button-orange" href="#realidade">
+            Entenda os impactos <span>↓</span>
+          </a>
+          <a class="text-link" href="#apoio">
+            Preciso de ajuda <span>↗</span>
+          </a>
         </div>
+
         <div class="hero-note">
           <span class="note-mark">!</span>
           <span>Sem julgamentos. Sem promessas milagrosas. Informação e apoio de verdade.</span>
@@ -135,7 +208,9 @@
         <div class="section-head">
           <p class="eyebrow dark-eyebrow">01 / A REALIDADE</p>
           <h2>QUANDO A APOSTA<br>PASSA DO <em>LIMITE.</em></h2>
-          <p class="section-intro">Apostar pode parecer só uma diversão. Mas quando começa a ocupar espaço demais, os impactos podem aparecer em várias partes da vida.</p>
+          <p class="section-intro">
+            Apostar pode parecer só uma diversão. Mas quando começa a ocupar espaço demais, os impactos podem aparecer em várias partes da vida.
+          </p>
         </div>
 
         <div class="impact-grid">
@@ -171,16 +246,28 @@
             <span class="card-line"></span>
           </article>
         </div>
-        <p class="disclaimer">Cada pessoa vive uma experiência diferente. Estes são possíveis sinais e impactos, não um diagnóstico.</p>
+
+        <p class="disclaimer">
+          Cada pessoa vive uma experiência diferente. Estes são possíveis sinais e impactos, não um diagnóstico.
+        </p>
       </div>
     </section>
 
     <section class="section section-navy" id="sinais">
       <div class="section-wrap signs-layout">
+
         <div>
-          <p class="eyebrow"><span class="eyebrow-dot"></span> 02 / OLHE PARA VOCÊ</p>
+          <p class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            02 / OLHE PARA VOCÊ
+          </p>
+
           <h2>ALGUMA COISA<br>JÁ NÃO PARECE<br><em>IGUAL?</em></h2>
-          <p class="section-intro light-intro">Às vezes, a mudança acontece aos poucos. Marque os pontos que você reconhece na sua rotina e use isso como um momento de reflexão, sem culpa.</p>
+
+          <p class="section-intro light-intro">
+            Às vezes, a mudança acontece aos poucos. Marque os pontos que você reconhece na sua rotina e use isso como um momento de reflexão, sem culpa.
+          </p>
+
           <div class="signs-aside">
             <span class="big-x">×</span>
             <p>Reconhecer um sinal não é fracasso. É uma oportunidade de buscar apoio.</p>
@@ -192,15 +279,45 @@
             <span>CHECK-IN PESSOAL</span>
             <span id="check-count">0 selecionados</span>
           </div>
+
           <p class="check-question">Nos últimos tempos, você…</p>
 
           <div class="checklist">
-            <label class="check-item"><input type="checkbox"><span class="fake-check"></span><span>Passou mais tempo ou dinheiro apostando do que pretendia?</span></label>
-            <label class="check-item"><input type="checkbox"><span class="fake-check"></span><span>Tentou recuperar dinheiro perdido fazendo novas apostas?</span></label>
-            <label class="check-item"><input type="checkbox"><span class="fake-check"></span><span>Escondeu apostas ou perdas de pessoas próximas?</span></label>
-            <label class="check-item"><input type="checkbox"><span class="fake-check"></span><span>Sentiu ansiedade, irritação ou culpa por causa das apostas?</span></label>
-            <label class="check-item"><input type="checkbox"><span class="fake-check"></span><span>Deixou contas, estudos, trabalho ou relações em segundo plano?</span></label>
-            <label class="check-item"><input type="checkbox"><span class="fake-check"></span><span>Sentiu dificuldade de parar ou de cumprir o limite que definiu?</span></label>
+            <label class="check-item">
+              <input type="checkbox">
+              <span class="fake-check"></span>
+              <span>Passou mais tempo ou dinheiro apostando do que pretendia?</span>
+            </label>
+
+            <label class="check-item">
+              <input type="checkbox">
+              <span class="fake-check"></span>
+              <span>Tentou recuperar dinheiro perdido fazendo novas apostas?</span>
+            </label>
+
+            <label class="check-item">
+              <input type="checkbox">
+              <span class="fake-check"></span>
+              <span>Escondeu apostas ou perdas de pessoas próximas?</span>
+            </label>
+
+            <label class="check-item">
+              <input type="checkbox">
+              <span class="fake-check"></span>
+              <span>Sentiu ansiedade, irritação ou culpa por causa das apostas?</span>
+            </label>
+
+            <label class="check-item">
+              <input type="checkbox">
+              <span class="fake-check"></span>
+              <span>Deixou contas, estudos, trabalho ou relações em segundo plano?</span>
+            </label>
+
+            <label class="check-item">
+              <input type="checkbox">
+              <span class="fake-check"></span>
+              <span>Sentiu dificuldade de parar ou de cumprir o limite que definiu?</span>
+            </label>
           </div>
 
           <div class="check-result" id="check-result" aria-live="polite">
@@ -208,22 +325,41 @@
             <p>Suas respostas não são armazenadas. Marque o que fizer sentido para você e reflita com calma.</p>
           </div>
 
-          <button class="button button-orange button-full" id="reflect-button">Ver minha reflexão <span>→</span></button>
-          <p class="privacy-note">Este check-in não é um teste clínico e não gera diagnóstico. Nada é enviado ou salvo.</p>
+          <button class="button button-orange button-full" id="reflect-button">
+            Ver minha reflexão <span>→</span>
+          </button>
+
+          <p class="privacy-note">
+            Este check-in não é um teste clínico e não gera diagnóstico. Nada é enviado ou salvo.
+          </p>
         </div>
       </div>
     </section>
 
+    <!-- TERCEIRA PÁGINA: TÍTULO CORRIGIDO -->
     <section class="section section-orange" id="retomar">
       <div class="section-wrap comeback">
-        <div class="comeback-stamp">VOCÊ<br>VEM<br>PRIMEIRO.</div>
+
+        <div class="comeback-stamp">
+          VOCÊ<br>VEM<br>PRIMEIRO.
+        </div>
 
         <div class="comeback-copy">
           <p class="eyebrow dark-eyebrow">03 / RECOMEÇAR É POSSÍVEL</p>
-          <h2>EXISTE UMA VIDA<br>ALÉM DAS <em>BETS.</em></h2>
-          <p>Você é muito mais do que uma perda, uma dívida ou uma fase difícil. Sua história não precisa ser definida por uma aposta.</p>
-          <p>Retomar o controle pode começar com um passo pequeno: conversar com alguém, buscar orientação, reorganizar as finanças ou procurar atendimento profissional.</p>
-          <a class="button button-navy" href="#apoio">Conheça caminhos de apoio <span>↗</span></a>
+
+          <h2>EXISTE UMA VIDA<br>ALÉM DAS<br><em>BETS.</em></h2>
+
+          <p>
+            Você é muito mais do que uma perda, uma dívida ou uma fase difícil. Sua história não precisa ser definida por uma aposta.
+          </p>
+
+          <p>
+            Retomar o controle pode começar com um passo pequeno: conversar com alguém, buscar orientação, reorganizar as finanças ou procurar atendimento profissional.
+          </p>
+
+          <a class="button button-navy" href="#apoio">
+            Conheça caminhos de apoio <span>↗</span>
+          </a>
         </div>
 
         <div class="comeback-side">
@@ -236,58 +372,105 @@
 
     <section class="section section-light help-section" id="apoio">
       <div class="section-wrap">
+
         <div class="section-head help-head">
           <p class="eyebrow dark-eyebrow">04 / VOCÊ NÃO PRECISA PASSAR POR ISSO SÓ</p>
           <h2>FALAR É UM<br>PRIMEIRO <em>PASSO.</em></h2>
-          <p class="section-intro">Buscar apoio não é sinal de fraqueza. Se as apostas estão trazendo sofrimento, você merece acolhimento e orientação.</p>
+          <p class="section-intro">
+            Buscar apoio não é sinal de fraqueza. Se as apostas estão trazendo sofrimento, você merece acolhimento e orientação.
+          </p>
         </div>
 
         <div class="help-grid">
+
           <article class="help-card featured-help">
-            <div class="help-topline"><span>APOIO EMOCIONAL</span><span class="help-arrow">↗</span></div>
+            <div class="help-topline">
+              <span>APOIO EMOCIONAL</span>
+              <span class="help-arrow">↗</span>
+            </div>
             <div class="help-number">188</div>
             <h3>CVV — Centro de Valorização da Vida</h3>
             <p>Conversa gratuita e sigilosa para quem precisa de apoio emocional. Atendimento por telefone, 24 horas.</p>
-            <a href="https://cvv.org.br/" target="_blank" rel="noopener noreferrer" class="help-link">Acessar o CVV <span>↗</span></a>
+            <a href="https://cvv.org.br/" target="_blank" rel="noopener noreferrer" class="help-link">
+              Acessar o CVV <span>↗</span>
+            </a>
           </article>
 
           <article class="help-card">
-            <div class="help-topline"><span>SAÚDE PÚBLICA</span><span class="help-arrow">↗</span></div>
+            <div class="help-topline">
+              <span>SAÚDE PÚBLICA</span>
+              <span class="help-arrow">↗</span>
+            </div>
             <div class="help-icon">＋</div>
             <h3>SUS e saúde mental</h3>
             <p>Procure uma UBS ou um serviço de saúde mental da sua região para orientação sobre o cuidado adequado.</p>
-            <a href="https://meususdigital.saude.gov.br/" target="_blank" rel="noopener noreferrer" class="help-link">Acessar Meu SUS Digital <span>↗</span></a>
+            <a href="https://meususdigital.saude.gov.br/" target="_blank" rel="noopener noreferrer" class="help-link">
+              Acessar Meu SUS Digital <span>↗</span>
+            </a>
           </article>
 
           <article class="help-card">
-            <div class="help-topline"><span>INFORMAÇÃO</span><span class="help-arrow">↗</span></div>
+            <div class="help-topline">
+              <span>INFORMAÇÃO</span>
+              <span class="help-arrow">↗</span>
+            </div>
             <div class="help-icon">↗</div>
             <h3>Informe-se sobre os riscos</h3>
             <p>Consulte informações do Ministério da Saúde sobre apostas e os cuidados com a saúde.</p>
-            <a href="https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/s/saude-mental/nao-aposte-sua-saude" target="_blank" rel="noopener noreferrer" class="help-link">Ler conteúdo oficial <span>↗</span></a>
+            <a href="https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/s/saude-mental/nao-aposte-sua-saude" target="_blank" rel="noopener noreferrer" class="help-link">
+              Ler conteúdo oficial <span>↗</span>
+            </a>
           </article>
         </div>
 
         <div class="urgent-note">
           <span class="urgent-icon">!</span>
-          <p><strong>Se você ou alguém estiver em perigo imediato:</strong> procure uma UPA ou pronto-socorro. Em uma emergência médica, ligue para o SAMU no 192.</p>
+          <p>
+            <strong>Se você ou alguém estiver em perigo imediato:</strong>
+            procure uma UPA ou pronto-socorro. Em uma emergência médica, ligue para o SAMU no 192.
+          </p>
         </div>
       </div>
     </section>
 
+    <!-- INSTAGRAM -->
     <section class="section social-section" id="instagram">
       <div class="section-wrap social-layout">
+
         <div class="social-copy">
-          <p class="eyebrow"><span class="eyebrow-dot"></span> 05 / NOSSA REDE</p>
+          <p class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            05 / NOSSA REDE
+          </p>
+
           <h2>ESSA CONVERSA<br>PRECISA <em>CONTINUAR.</em></h2>
-          <p>Compartilhe informação, converse com quem você gosta e ajude essa mensagem a chegar mais longe.</p>
-          <a class="button button-orange" href="https://www.instagram.com/_desbet/" target="_blank" rel="noopener noreferrer">Seguir a DESBET no Instagram <span>↗</span></a>
+
+          <p>
+            Compartilhe informação, converse com quem você gosta e ajude essa mensagem a chegar mais longe.
+          </p>
+
+          <a class="button button-orange"
+             href="https://www.instagram.com/_desbet/"
+             target="_blank"
+             rel="noopener noreferrer">
+            Seguir a DESBET no Instagram <span>↗</span>
+          </a>
         </div>
 
         <div class="social-post">
           <div class="post-top">
-            <img class="post-avatar" src="/desbet-perfil.png" alt="Logo DESBET" style="width:42px;height:42px;object-fit:cover;border-radius:50%;">
-            <span><strong>@_desbet</strong><small>Campanha de conscientização</small></span>
+            <img
+              class="post-avatar"
+              src="/desbet-perfil.png"
+              alt="Logo DESBET"
+              style="width:42px;height:42px;object-fit:cover;border-radius:50%;"
+            >
+
+            <span>
+              <strong>@_desbet</strong>
+              <small>Campanha de conscientização</small>
+            </span>
+
             <span class="post-instagram">◎</span>
           </div>
 
@@ -296,22 +479,45 @@
             Confira a publicação original da DESBET.
           </div>
 
-          <a href="https://www.instagram.com/_desbet/p/De5GSRFG-hi/" target="_blank" rel="noopener noreferrer" aria-label="Abrir publicação original da DESBET no Instagram">
-            <img src="/desbet-ultimo-post.png" alt="Publicação da DESBET: As bets acabaram. E agora?" style="display:block;width:100%;height:auto;border-radius:10px;margin:12px auto;">
+          <a
+            href="https://www.instagram.com/_desbet/p/De5GSRFG-hi/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Abrir publicação original da DESBET no Instagram"
+          >
+            <img
+              src="/desbet-ultimo-post.png"
+              alt="Publicação da DESBET: As bets acabaram. E agora?"
+              style="display:block;width:100%;height:auto;border-radius:10px;margin:12px auto;"
+            >
           </a>
 
-          <a class="post-button" href="https://www.instagram.com/_desbet/p/De5GSRFG-hi/" target="_blank" rel="noopener noreferrer">ABRIR PUBLICAÇÃO ORIGINAL <span>↗</span></a>
+          <a
+            class="post-button"
+            href="https://www.instagram.com/_desbet/p/De5GSRFG-hi/"
+            target="_blank"
+            rel="noopener noreferrer">
+            ABRIR PUBLICAÇÃO ORIGINAL <span>↗</span>
+          </a>
         </div>
       </div>
     </section>
 
+    <!-- ENTREVISTA -->
     <section class="section section-navy" id="entrevista">
       <div class="section-wrap" style="text-align:center;padding-top:72px;padding-bottom:72px;">
-        <p class="eyebrow"><span class="eyebrow-dot"></span> 06 / CONTEÚDO ESPECIAL</p>
+
+        <p class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          06 / CONTEÚDO ESPECIAL
+        </p>
+
         <h2>UMA CONVERSA<br>QUE VEM AÍ.</h2>
+
         <p class="section-intro light-intro" style="margin-left:auto;margin-right:auto;">
           Estamos preparando uma entrevista para ampliar essa conversa e trazer ainda mais informação sobre os impactos das apostas online.
         </p>
+
         <p style="display:inline-block;margin-top:24px;padding:14px 28px;border:1px solid #f5a623;color:#f5a623;font-weight:900;letter-spacing:3px;">
           EM BREVE
         </p>
@@ -325,15 +531,21 @@
         <a href="#inicio" aria-label="Voltar ao início">VOLTAR AO TOPO ↑</a>
       </div>
     </section>
+
   </main>
 
+  <!-- CRÉDITOS FINAIS -->
   <footer class="footer">
     <div class="section-wrap footer-inner">
+
       <a href="#inicio" class="footer-brand">DES<span>BET.</span></a>
 
       <div class="footer-credits-grid">
+
         <div class="footer-project-credit">
-          <p>Uma campanha de conscientização sobre os impactos das apostas online, idealizada por estudantes de Publicidade e Propaganda.</p>
+          <p>
+            Uma campanha de conscientização sobre os impactos das apostas online, idealizada por estudantes de Publicidade e Propaganda.
+          </p>
         </div>
 
         <div class="footer-team">
@@ -341,6 +553,7 @@
           <p>Laryssa Porto · Breno Oliveira · Antonio Fernandes · Wesley Lima</p>
           <p>San Andrade · Renata Cadilhe · Pedro Valentim · Matheus Correa</p>
         </div>
+
       </div>
 
       <div class="footer-links">
@@ -354,10 +567,10 @@
         <span>ODS 3 · SAÚDE E BEM-ESTAR</span>
         <span>INFORMAÇÃO É CUIDADO.</span>
       </div>
+
     </div>
   </footer>
 
   <script src="/script.js"></script>
 </body>
 </html>
-
