@@ -1,5 +1,3 @@
-
-
 <!doctype html>
 <html lang="pt-BR">
 <head>
@@ -12,9 +10,62 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
-</head>
-<body>
 
+  <style>
+    /* Logo do topo */
+    .site-header .brand img {
+      background: transparent;
+      mix-blend-mode: multiply;
+    }
+
+    /* Frase afastada da faixa decorativa */
+    .hero-art .art-caption {
+      transform: translateX(-34px);
+      z-index: 5;
+    }
+
+    /* Créditos finais */
+    .footer-credits-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+      gap: 32px;
+      align-items: start;
+      width: 100%;
+      margin: 18px 0 24px;
+    }
+
+    .footer-project-credit p,
+    .footer-team p {
+      margin: 0;
+      line-height: 1.7;
+    }
+
+    .footer-team h3 {
+      margin: 0 0 10px;
+      color: #f5a623;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 2px;
+    }
+
+    .footer-team p + p {
+      margin-top: 4px;
+    }
+
+    @media (max-width: 700px) {
+      .hero-art .art-caption {
+        transform: translateX(-12px);
+      }
+
+      .footer-credits-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
   <div class="topline">
     <span>UMA CAMPANHA DE CONSCIENTIZAÇÃO</span>
     <span>ODS 3 · SAÚDE E BEM-ESTAR</span>
@@ -22,11 +73,9 @@
 
   <header class="site-header">
     <a class="brand" href="#inicio" aria-label="DESBET, início">
-      <img src="/public/desbet-logo.jpg" alt="Logo DESBET com um tigre laranja sobre o nome">
+      <img src="/desbet-logo.jpg" alt="Logo DESBET com um tigre laranja sobre o nome">
     </a>
-
     <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
-
     <nav class="nav" aria-label="Navegação principal">
       <a href="#realidade">A realidade</a>
       <a href="#sinais">Sinais de alerta</a>
@@ -38,19 +87,16 @@
   </header>
 
   <main>
-
     <section class="hero section-wrap" id="inicio">
       <div class="hero-copy">
         <p class="eyebrow"><span class="eyebrow-dot"></span> SUA VIDA VALE MAIS QUE QUALQUER APOSTA</p>
         <h1>E SE A PRÓXIMA<br>APOSTA FOSSE<br><em>EM VOCÊ?</em></h1>
         <p class="hero-lead">A emoção de apostar pode durar segundos. As consequências podem ficar por muito mais tempo.</p>
         <p class="hero-text">A DESBET é uma campanha para abrir os olhos, quebrar o silêncio e lembrar que a vida real merece estar em primeiro lugar.</p>
-
         <div class="hero-actions">
           <a class="button button-orange" href="#realidade">Entenda os impactos <span>↓</span></a>
           <a class="text-link" href="#apoio">Preciso de ajuda <span>↗</span></a>
         </div>
-
         <div class="hero-note">
           <span class="note-mark">!</span>
           <span>Sem julgamentos. Sem promessas milagrosas. Informação e apoio de verdade.</span>
@@ -125,19 +171,16 @@
             <span class="card-line"></span>
           </article>
         </div>
-
         <p class="disclaimer">Cada pessoa vive uma experiência diferente. Estes são possíveis sinais e impactos, não um diagnóstico.</p>
       </div>
     </section>
 
     <section class="section section-navy" id="sinais">
       <div class="section-wrap signs-layout">
-
         <div>
           <p class="eyebrow"><span class="eyebrow-dot"></span> 02 / OLHE PARA VOCÊ</p>
           <h2>ALGUMA COISA<br>JÁ NÃO PARECE<br><em>IGUAL?</em></h2>
           <p class="section-intro light-intro">Às vezes, a mudança acontece aos poucos. Marque os pontos que você reconhece na sua rotina e use isso como um momento de reflexão, sem culpa.</p>
-
           <div class="signs-aside">
             <span class="big-x">×</span>
             <p>Reconhecer um sinal não é fracasso. É uma oportunidade de buscar apoio.</p>
@@ -149,7 +192,6 @@
             <span>CHECK-IN PESSOAL</span>
             <span id="check-count">0 selecionados</span>
           </div>
-
           <p class="check-question">Nos últimos tempos, você…</p>
 
           <div class="checklist">
@@ -178,7 +220,7 @@
 
         <div class="comeback-copy">
           <p class="eyebrow dark-eyebrow">03 / RECOMEÇAR É POSSÍVEL</p>
-          <h2>EXISTE VIDA<br>ALÉM DAS <em>BETS.</em></h2>
+          <h2>EXISTE UMA VIDA<br>ALÉM DAS <em>BETS.</em></h2>
           <p>Você é muito mais do que uma perda, uma dívida ou uma fase difícil. Sua história não precisa ser definida por uma aposta.</p>
           <p>Retomar o controle pode começar com um passo pequeno: conversar com alguém, buscar orientação, reorganizar as finanças ou procurar atendimento profissional.</p>
           <a class="button button-navy" href="#apoio">Conheça caminhos de apoio <span>↗</span></a>
@@ -233,49 +275,20 @@
       </div>
     </section>
 
-    <!-- INSTAGRAM DESBET -->
     <section class="section social-section" id="instagram">
       <div class="section-wrap social-layout">
-
         <div class="social-copy">
           <p class="eyebrow"><span class="eyebrow-dot"></span> 05 / NOSSA REDE</p>
           <h2>ESSA CONVERSA<br>PRECISA <em>CONTINUAR.</em></h2>
           <p>Compartilhe informação, converse com quem você gosta e ajude essa mensagem a chegar mais longe.</p>
-
-          <a class="button button-orange"
-             href="https://www.instagram.com/_desbet/"
-             target="_blank"
-             rel="noopener noreferrer">
-            Seguir a DESBET no Instagram <span>↗</span>
-          </a>
+          <a class="button button-orange" href="https://www.instagram.com/_desbet/" target="_blank" rel="noopener noreferrer">Seguir a DESBET no Instagram <span>↗</span></a>
         </div>
 
-        <!-- CARTÃO DA PUBLICAÇÃO -->
         <div class="social-post">
-
           <div class="post-top">
-
-            <!-- FOTO DE PERFIL: SOMENTE O CÍRCULO DA LOGO -->
-            <img
-              class="post-avatar"
-              src="/desbet-perfil.png"
-              alt="Logo circular da DESBET"
-              style="width:48px;height:48px;object-fit:cover;border-radius:50%;flex-shrink:0;"
-            >
-
-            <span>
-              <strong>@_desbet</strong>
-              <small>Campanha de conscientização</small>
-            </span>
-
-            <a
-              class="post-instagram"
-              href="https://www.instagram.com/_desbet/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Visitar Instagram da DESBET"
-            >◎</a>
-
+            <img class="post-avatar" src="/desbet-perfil.png" alt="Logo DESBET" style="width:42px;height:42px;object-fit:cover;border-radius:50%;">
+            <span><strong>@_desbet</strong><small>Campanha de conscientização</small></span>
+            <span class="post-instagram">◎</span>
           </div>
 
           <div class="post-caption">
@@ -283,52 +296,25 @@
             Confira a publicação original da DESBET.
           </div>
 
-          <!-- PRINT ORIGINAL DO POST -->
-          <a
-            href="https://www.instagram.com/_desbet/p/De5GSRFG-hi/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Abrir publicação original da DESBET no Instagram"
-          >
-            <img
-              src="/desbet-ultimo-post.png"
-              alt="Publicação da DESBET: As bets acabaram. E agora?"
-              style="display:block;width:100%;height:auto;border-radius:10px;margin:12px auto;"
-            >
+          <a href="https://www.instagram.com/_desbet/p/De5GSRFG-hi/" target="_blank" rel="noopener noreferrer" aria-label="Abrir publicação original da DESBET no Instagram">
+            <img src="/desbet-ultimo-post.png" alt="Publicação da DESBET: As bets acabaram. E agora?" style="display:block;width:100%;height:auto;border-radius:10px;margin:12px auto;">
           </a>
 
-          <a
-            class="post-button"
-            href="https://www.instagram.com/_desbet/p/De5GSRFG-hi/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            ABRIR PUBLICAÇÃO ORIGINAL <span>↗</span>
-          </a>
-
+          <a class="post-button" href="https://www.instagram.com/_desbet/p/De5GSRFG-hi/" target="_blank" rel="noopener noreferrer">ABRIR PUBLICAÇÃO ORIGINAL <span>↗</span></a>
         </div>
       </div>
     </section>
 
-    <!-- ENTREVISTA EM BREVE -->
     <section class="section section-navy" id="entrevista">
       <div class="section-wrap" style="text-align:center;padding-top:72px;padding-bottom:72px;">
-
-        <p class="eyebrow">
-          <span class="eyebrow-dot"></span>
-          06 / CONTEÚDO ESPECIAL
-        </p>
-
+        <p class="eyebrow"><span class="eyebrow-dot"></span> 06 / CONTEÚDO ESPECIAL</p>
         <h2>UMA CONVERSA<br>QUE VEM AÍ.</h2>
-
         <p class="section-intro light-intro" style="margin-left:auto;margin-right:auto;">
           Estamos preparando uma entrevista para ampliar essa conversa e trazer ainda mais informação sobre os impactos das apostas online.
         </p>
-
         <p style="display:inline-block;margin-top:24px;padding:14px 28px;border:1px solid #f5a623;color:#f5a623;font-weight:900;letter-spacing:3px;">
           EM BREVE
         </p>
-
       </div>
     </section>
 
@@ -339,15 +325,23 @@
         <a href="#inicio" aria-label="Voltar ao início">VOLTAR AO TOPO ↑</a>
       </div>
     </section>
-
   </main>
 
   <footer class="footer">
     <div class="section-wrap footer-inner">
-
       <a href="#inicio" class="footer-brand">DES<span>BET.</span></a>
 
-      <p>Uma campanha de conscientização sobre os impactos das apostas online.</p>
+      <div class="footer-credits-grid">
+        <div class="footer-project-credit">
+          <p>Uma campanha de conscientização sobre os impactos das apostas online, idealizada por estudantes de Publicidade e Propaganda.</p>
+        </div>
+
+        <div class="footer-team">
+          <h3>IDEALIZADORES</h3>
+          <p>Laryssa Porto · Breno Oliveira · Antonio Fernandes · Wesley Lima</p>
+          <p>San Andrade · Renata Cadilhe · Pedro Valentim · Matheus Correa</p>
+        </div>
+      </div>
 
       <div class="footer-links">
         <a href="#realidade">A campanha</a>
@@ -360,11 +354,10 @@
         <span>ODS 3 · SAÚDE E BEM-ESTAR</span>
         <span>INFORMAÇÃO É CUIDADO.</span>
       </div>
-
     </div>
   </footer>
 
   <script src="/script.js"></script>
-
 </body>
 </html>
+
