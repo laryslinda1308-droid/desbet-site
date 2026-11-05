@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="pt-BR">
 <head>
@@ -13,7 +14,6 @@
   <link rel="stylesheet" href="/styles.css">
 
   <style>
-    /* CORREÇÃO GERAL DOS TEXTOS */
     h1, h2, h3 {
       line-height: 1.12 !important;
       letter-spacing: 0.01em !important;
@@ -41,7 +41,22 @@
       box-shadow: none !important;
     }
 
-    /* FRASE DA PRIMEIRA PÁGINA */
+    /* FRASE NA BARRA SUPERIOR */
+    .topline {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      gap: 16px !important;
+    }
+
+    .topline .topline-message {
+      text-align: right !important;
+      font-weight: 900 !important;
+      line-height: 1.15 !important;
+      letter-spacing: 0.08em !important;
+    }
+
+    /* REMOVE A FRASE DO QUADRADO */
     .hero-art {
       overflow: visible !important;
     }
@@ -51,19 +66,7 @@
     }
 
     .hero-art .art-caption {
-      position: absolute !important;
-      left: 18px !important;
-      right: 18px !important;
-      bottom: 12% !important;
-      top: auto !important;
-      width: auto !important;
-      max-width: none !important;
-      transform: none !important;
-      z-index: 20 !important;
-      text-align: center !important;
-      line-height: 1.25 !important;
-      letter-spacing: 0.04em !important;
-      white-space: normal !important;
+      display: none !important;
     }
 
     /* TERCEIRA PÁGINA */
@@ -83,7 +86,6 @@
       overflow: visible !important;
     }
 
-    /* SEGUNDA LINHA: ALÉM DAS BETS */
     .comeback-second-line {
       display: block !important;
       white-space: nowrap !important;
@@ -92,7 +94,6 @@
       letter-spacing: 0 !important;
     }
 
-    /* BETS EM AZUL-MARINHO */
     .comeback-copy h2 em {
       display: inline-block !important;
       white-space: nowrap !important;
@@ -137,11 +138,17 @@
         height: 58px !important;
       }
 
-      .hero-art .art-caption {
-        left: 12px !important;
-        right: 12px !important;
-        bottom: 9% !important;
-        font-size: clamp(0.8rem, 3.2vw, 1.1rem) !important;
+      .topline {
+        gap: 8px !important;
+      }
+
+      .topline span {
+        font-size: 0.65rem !important;
+      }
+
+      .topline .topline-message {
+        font-size: 0.65rem !important;
+        letter-spacing: 0.04em !important;
       }
 
       .comeback-copy h2 {
@@ -169,7 +176,7 @@
 
   <div class="topline">
     <span>UMA CAMPANHA DE CONSCIENTIZAÇÃO</span>
-    <span>ODS 3 · SAÚDE E BEM-ESTAR</span>
+    <span class="topline-message">PARE. PENSE.<br>ESCOLHA VOCÊ.</span>
   </div>
 
   <header class="site-header">
@@ -191,7 +198,6 @@
 
   <main>
 
-    <!-- PRIMEIRA PÁGINA -->
     <section class="hero section-wrap" id="inicio">
       <div class="hero-copy">
         <p class="eyebrow">
@@ -232,7 +238,6 @@
         <div class="art-number">01</div>
         <div class="art-word">DES<br><span>BET.</span></div>
         <div class="art-stripe"></div>
-        <div class="art-caption">PARE. PENSE.<br>ESCOLHA VOCÊ.</div>
         <div class="art-stamp">SUA<br>VIDA<br>IMPORTA</div>
       </div>
 
@@ -251,7 +256,6 @@
       </div>
     </section>
 
-    <!-- SEGUNDA PÁGINA -->
     <section class="section section-light" id="realidade">
       <div class="section-wrap">
         <div class="section-head">
@@ -302,7 +306,6 @@
       </div>
     </section>
 
-    <!-- TERCEIRA PÁGINA -->
     <section class="section section-navy" id="sinais">
       <div class="section-wrap signs-layout">
 
@@ -386,7 +389,6 @@
       </div>
     </section>
 
-    <!-- VIDA ALÉM DAS BETS -->
     <section class="section section-orange" id="retomar">
       <div class="section-wrap comeback">
 
@@ -423,7 +425,6 @@
       </div>
     </section>
 
-    <!-- APOIO -->
     <section class="section section-light help-section" id="apoio">
       <div class="section-wrap">
 
@@ -487,7 +488,6 @@
       </div>
     </section>
 
-    <!-- INSTAGRAM -->
     <section class="section social-section" id="instagram">
       <div class="section-wrap social-layout">
 
@@ -557,7 +557,6 @@
       </div>
     </section>
 
-    <!-- ENTREVISTA -->
     <section class="section section-navy" id="entrevista">
       <div class="section-wrap" style="text-align:center;padding-top:72px;padding-bottom:72px;">
 
@@ -578,7 +577,6 @@
       </div>
     </section>
 
-    <!-- CHAMADA FINAL -->
     <section class="final-banner">
       <div class="section-wrap final-inner">
         <p>UMA ESCOLHA PODE MUDAR O RUMO.</p>
@@ -589,7 +587,6 @@
 
   </main>
 
-  <!-- CRÉDITOS FINAIS -->
   <footer class="footer">
     <div class="section-wrap footer-inner">
 
