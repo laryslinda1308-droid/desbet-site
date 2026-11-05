@@ -83,6 +83,15 @@
       overflow: visible !important;
     }
 
+    /* SEGUNDA LINHA: ALÉM DAS BETS */
+    .comeback-second-line {
+      display: block !important;
+      white-space: nowrap !important;
+      font-size: 0.82em !important;
+      line-height: 1.12 !important;
+      letter-spacing: 0 !important;
+    }
+
     /* BETS EM AZUL-MARINHO */
     .comeback-copy h2 em {
       display: inline-block !important;
@@ -99,30 +108,6 @@
       line-height: 1.12 !important;
       letter-spacing: 0 !important;
       overflow: visible !important;
-    }
-
-    /* RESPONSIVIDADE */
-    @media (max-width: 700px) {
-      .site-header .brand img {
-        width: 58px !important;
-        height: 58px !important;
-      }
-
-      .hero-art .art-caption {
-        left: 12px !important;
-        right: 12px !important;
-        bottom: 9% !important;
-        font-size: clamp(0.8rem, 3.2vw, 1.1rem) !important;
-      }
-
-      .comeback-copy h2 {
-        font-size: clamp(2rem, 9vw, 3.2rem) !important;
-      }
-
-      .comeback-copy h2 em {
-        color: #062150 !important;
-        -webkit-text-fill-color: #062150 !important;
-      }
     }
 
     /* CRÉDITOS FINAIS */
@@ -145,7 +130,33 @@
       overflow-wrap: break-word;
     }
 
+    /* RESPONSIVIDADE */
     @media (max-width: 700px) {
+      .site-header .brand img {
+        width: 58px !important;
+        height: 58px !important;
+      }
+
+      .hero-art .art-caption {
+        left: 12px !important;
+        right: 12px !important;
+        bottom: 9% !important;
+        font-size: clamp(0.8rem, 3.2vw, 1.1rem) !important;
+      }
+
+      .comeback-copy h2 {
+        font-size: clamp(2rem, 9vw, 3.2rem) !important;
+      }
+
+      .comeback-second-line {
+        font-size: 0.82em !important;
+      }
+
+      .comeback-copy h2 em {
+        color: #062150 !important;
+        -webkit-text-fill-color: #062150 !important;
+      }
+
       .footer-credits-grid {
         grid-template-columns: 1fr;
         gap: 18px;
@@ -180,6 +191,7 @@
 
   <main>
 
+    <!-- PRIMEIRA PÁGINA -->
     <section class="hero section-wrap" id="inicio">
       <div class="hero-copy">
         <p class="eyebrow">
@@ -239,6 +251,7 @@
       </div>
     </section>
 
+    <!-- SEGUNDA PÁGINA -->
     <section class="section section-light" id="realidade">
       <div class="section-wrap">
         <div class="section-head">
@@ -289,8 +302,10 @@
       </div>
     </section>
 
+    <!-- TERCEIRA PÁGINA -->
     <section class="section section-navy" id="sinais">
       <div class="section-wrap signs-layout">
+
         <div>
           <p class="eyebrow">
             <span class="eyebrow-dot"></span>
@@ -371,7 +386,7 @@
       </div>
     </section>
 
-    <!-- TERCEIRA PÁGINA -->
+    <!-- VIDA ALÉM DAS BETS -->
     <section class="section section-orange" id="retomar">
       <div class="section-wrap comeback">
 
@@ -382,7 +397,10 @@
         <div class="comeback-copy">
           <p class="eyebrow dark-eyebrow">03 / RECOMEÇAR É POSSÍVEL</p>
 
-          <h2>EXISTE UMA VIDA<br>ALÉM DAS<br><em>BETS.</em></h2>
+          <h2>
+            <span style="display:block;">EXISTE UMA VIDA</span>
+            <span class="comeback-second-line">ALÉM DAS <em>BETS.</em></span>
+          </h2>
 
           <p>
             Você é muito mais do que uma perda, uma dívida ou uma fase difícil. Sua história não precisa ser definida por uma aposta.
@@ -405,6 +423,7 @@
       </div>
     </section>
 
+    <!-- APOIO -->
     <section class="section section-light help-section" id="apoio">
       <div class="section-wrap">
 
@@ -522,7 +541,7 @@
           >
             <img
               src="/desbet-ultimo-post.png"
-              alt="Publicação da DESBET: As bets acabaram. E agora?"
+              alt="Publicação da DESBET"
               style="display:block;width:100%;height:auto;border-radius:10px;margin:12px auto;"
             >
           </a>
@@ -559,6 +578,7 @@
       </div>
     </section>
 
+    <!-- CHAMADA FINAL -->
     <section class="final-banner">
       <div class="section-wrap final-inner">
         <p>UMA ESCOLHA PODE MUDAR O RUMO.</p>
@@ -584,7 +604,7 @@
         </div>
 
         <div class="footer-team">
-          <p>Laryssa Porto · Breno Oliveira · Antonio Fernandes · Wesley Lima</p>
+          <p>Laryssa Porto · Breno Saoli · Antonio Fernandes · Wesley Lima</p>
           <p>San Andrade · Renata Cadilhe · Pedro Valentim · Matheus Correa</p>
         </div>
 
