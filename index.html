@@ -131,6 +131,49 @@
       overflow-wrap: break-word;
     }
 
+    /* VÍDEO DA ENTREVISTA */
+    .entrevista-container {
+      text-align: center;
+      padding-top: 72px;
+      padding-bottom: 72px;
+    }
+
+    .entrevista-container h2 {
+      margin-top: 20px;
+    }
+
+    .entrevista-intro {
+      margin: 20px auto 35px;
+      max-width: 650px;
+    }
+
+    .entrevista-video {
+      width: 100%;
+      max-width: 900px;
+      aspect-ratio: 16 / 9;
+      margin: 0 auto;
+      overflow: hidden;
+      border-radius: 14px;
+      border: 2px solid #f5a623;
+      background: #000;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+    }
+
+    .entrevista-video iframe {
+      width: 100%;
+      height: 100%;
+      display: block;
+      border: 0;
+    }
+
+    .entrevista-caption {
+      margin-top: 22px;
+      color: #f5a623;
+      font-size: 0.75rem;
+      font-weight: 900;
+      letter-spacing: 2px;
+    }
+
     /* RESPONSIVIDADE */
     @media (max-width: 700px) {
       .site-header .brand img {
@@ -168,6 +211,19 @@
         grid-template-columns: 1fr;
         gap: 18px;
       }
+
+      .entrevista-container {
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+
+      .entrevista-video {
+        border-radius: 8px;
+      }
+
+      .entrevista-intro {
+        margin-bottom: 25px;
+      }
     }
   </style>
 </head>
@@ -198,6 +254,7 @@
 
   <main>
 
+    <!-- PRIMEIRA PÁGINA -->
     <section class="hero section-wrap" id="inicio">
       <div class="hero-copy">
         <p class="eyebrow">
@@ -256,11 +313,12 @@
       </div>
     </section>
 
+    <!-- SEGUNDA PÁGINA -->
     <section class="section section-light" id="realidade">
       <div class="section-wrap">
         <div class="section-head">
           <p class="eyebrow dark-eyebrow">01 / A REALIDADE</p>
-          <h2>QUANDO A APOSTA<br>PASSA DO <em>LIMITE.</em></h2>
+          <h2>QUANDO A APOSTA<br>PASSA DO <em> LIMITE.</em></h2>
           <p class="section-intro">
             Apostar pode parecer só uma diversão. Mas quando começa a ocupar espaço demais, os impactos podem aparecer em várias partes da vida.
           </p>
@@ -306,6 +364,7 @@
       </div>
     </section>
 
+    <!-- TERCEIRA PÁGINA -->
     <section class="section section-navy" id="sinais">
       <div class="section-wrap signs-layout">
 
@@ -389,6 +448,7 @@
       </div>
     </section>
 
+    <!-- VIDA ALÉM DAS BETS -->
     <section class="section section-orange" id="retomar">
       <div class="section-wrap comeback">
 
@@ -425,6 +485,7 @@
       </div>
     </section>
 
+    <!-- APOIO -->
     <section class="section section-light help-section" id="apoio">
       <div class="section-wrap">
 
@@ -488,6 +549,7 @@
       </div>
     </section>
 
+    <!-- INSTAGRAM -->
     <section class="section social-section" id="instagram">
       <div class="section-wrap social-layout">
 
@@ -557,26 +619,39 @@
       </div>
     </section>
 
+    <!-- ENTREVISTA COM VÍDEO -->
     <section class="section section-navy" id="entrevista">
-      <div class="section-wrap" style="text-align:center;padding-top:72px;padding-bottom:72px;">
+      <div class="section-wrap entrevista-container">
 
         <p class="eyebrow">
           <span class="eyebrow-dot"></span>
           06 / CONTEÚDO ESPECIAL
         </p>
 
-        <h2>UMA CONVERSA<br>QUE VEM AÍ.</h2>
+        <h2>UMA CONVERSA<br>QUE PRECISA SER OUVIDA.</h2>
 
-        <p class="section-intro light-intro" style="margin-left:auto;margin-right:auto;">
-          Estamos preparando uma entrevista para ampliar essa conversa e trazer ainda mais informação sobre os impactos das apostas online.
+        <p class="section-intro light-intro entrevista-intro">
+          Uma entrevista para ampliar essa conversa e trazer informação sobre os impactos das apostas online.
         </p>
 
-        <p style="display:inline-block;margin-top:24px;padding:14px 28px;border:1px solid #f5a623;color:#f5a623;font-weight:900;letter-spacing:3px;">
-          EM BREVE
+        <div class="entrevista-video">
+          <iframe
+            src="https://www.youtube.com/embed/u10NGNKHJpE"
+            title="Entrevista DESBET"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        <p class="entrevista-caption">
+          DESBET — APOSTE NA SUA VIDA, NÃO NAS BETS.
         </p>
+
       </div>
     </section>
 
+    <!-- CHAMADA FINAL -->
     <section class="final-banner">
       <div class="section-wrap final-inner">
         <p>UMA ESCOLHA PODE MUDAR O RUMO.</p>
@@ -587,6 +662,7 @@
 
   </main>
 
+  <!-- CRÉDITOS FINAIS -->
   <footer class="footer">
     <div class="section-wrap footer-inner">
 
@@ -626,3 +702,4 @@
 
 </body>
 </html>
+
